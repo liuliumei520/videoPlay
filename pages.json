@@ -1,14 +1,87 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
+	"easycom": {
+		"^u-(.*)": "../uview-ui/components/u-$1/u-$1.vue"
+	},
+	//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": ""
+				"navigationBarTitleText": "",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"titleNView": {
+						"searchInput": {
+							"placeholder": "请输入关键字",
+							"disabled": false,
+							"align": "left",
+							"borderRadius": "15px",
+							"backgroundColor": "#F7F7F7",
+							"placeholderColor": "#B3B3B3"
+						},
+						"backButton":{
+						      "title":"返回",
+						      "titleSize": "16px"
+						    },
+						"buttons": [{
+							"float": "left",
+							"color":"#636263",
+							"fontSize":"16px",
+							"text": "视频"
+						}, {
+							"float": "right",
+							"color":"#ff5500",
+							// "fontSrc": "./static/iconfont.ttf",
+							"text": "+"
+						}]
+					}
+				}
 			}
+		}
+
+		, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/aaa/aaa",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/classify/classify",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/find/find",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	    
         ,{
-            "path" : "pages/my/my",
+            "path" : "pages/videoReleased/videoReleased",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "视频发布",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#ff0000",
+				"navigationBarColor" : "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "components/index/uploading/uploading",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -18,7 +91,7 @@
         }
     ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		// "navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
@@ -28,24 +101,23 @@
 		"selectedColor": "#3cc51f",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
-		"list": [
-			{
+		"list": [{
 				"pagePath": "pages/index/index",
 				// "iconPath": "static/tarbar/31shouye.png",
 				// "selectedIconPath": "static/tarbar/31gouwuchexuanzhong.png",
 				"text": "首页"
-			}, 
+			},
 			{
-				"pagePath": "pages/list/list",
+				"pagePath": "pages/classify/classify",
 				// "iconPath": "static/tarbar/fenlei_1.png",
 				// "selectedIconPath": "static/tarbar/fenlei.png",
 				"text": "分类"
 			},
 			{
-				"pagePath": "pages/shopcart/shopcart",
+				"pagePath": "pages/find/find",
 				// "iconPath": "static/tarbar/31gouwuche.png",
 				// "selectedIconPath": "static/tarbar/31gouwuchexuanzhong.png",
-				"text": "购物车"
+				"text": "发现"
 			},
 			{
 				"pagePath": "pages/my/my",

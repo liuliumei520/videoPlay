@@ -11,9 +11,9 @@ export default{
 	},
 	request(options){
 		
-		// uni.showLoading({
-		// 	title : "加载中"
-		// });
+		uni.showLoading({
+			title : "加载中"
+		});
 		options.url = this.common.baseUrl + options.url;
 		options.data = options.data || this.common.data;
 		options.header = options.header || this.common.header;
@@ -32,9 +32,9 @@ export default{
 					let data = result.data.data;
 					res(data);
 					
-					// setTimeout(function(){
-					// 	uni.hideLoading()
-					// },2000);
+					setTimeout(function(){
+						uni.hideLoading()
+					},2000);
 				}
 			})
 		})
